@@ -1,0 +1,26 @@
+{
+  "name": "lenka_ukol1",
+  "version": "1.0.0",
+  "description": "Pokus o první úkol ke kurzu",
+  "main": "index.js",
+  "devDependencies": {
+
+    "husky": "^9.1.7"
+
+  },
+  "scripts": {
+    "postinstall": "echo 'Hotovo. Nainstalováno.'",
+    "start": "node index.js",
+    "test": "echo \"Proběhl skript test\"",
+    "prepare": "husky",
+    "lint": "eslint"
+  },
+  "author": "Lenka Kociánová",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lenkakoci/Lenka_ukol1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lenkakoci/Lenka_ukol1/hlaseni_chyb"
+  }
+}
