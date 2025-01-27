@@ -17,7 +17,8 @@
     "start": "node index.js",
     "test": "echo \"Proběhl skript test\"",
     "prepare": "husky",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint . --fix"
   },
   "author": "Lenka Kociánová",
   "repository": {
