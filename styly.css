@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+tfoot {
+    background-color: #f9f9f9;
+    font-style: italic;
+}
+form {
+    margin-top: 20px;
+}
+label {
+    margin: 10px 0 5px;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

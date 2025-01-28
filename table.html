@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <link rel="stylesheet" href="styly.css">
+    <meta charset="UTF-8">
+    <title>Tabulka kontaktů</title>
+</head>
+<body>
+
+<table>
+    <caption>Tabulka kontaktů</caption>
+    <thead>
+    <tr>
+        <th>Jméno</th>
+        <th>Příjmení</th>
+        <th>Email</th>
+        <th>Telefon</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td colspan="4">Toto je patička a má být vždy úplně dole, i když přidám nový řádek 😉.</td>
+    </tr>
+    </tfoot>
+    <tbody id="data">
+    <tr>
+        <td>Magdalena</td>
+        <td>Dobromila</td>
+        <td>magda.good@example.com</td>
+        <td>+420 666 666 666</td>
+    </tr>
+    <tr>
+        <td>Alexandr</td>
+        <td>Veliký</td>
+        <td>alex.greit@example.com</td>
+        <td>+420 999 999 999</td>
+    </tr>
+    </tbody>
+
+</table>
+<div>
+    <form id="form">
+        <h2>Přidat nový kontakt</h2>
+        <label for="first_name">Jméno:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Příjmení:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label for = "email">Email:</label>
+        <input type ="email" name="email" id="email" required>
+
+        <label for="phone">Telefon:</label>
+        <input type="text" name="telefon" id="phone" required>
+
+
+
+    </form>
+</div>
+<script>
+    var addRow = () => {
+        const table = document.getElementById("data");
+        const newRow = table.insertRow(-1);
+        ["phone", "email", "last_name", "first_name"].forEach((fieldName) => {
+            const newValue = document.getElementById(fieldName).value;
+            const newCell = newRow.insertCell(0);
+            let newText = document.createTextNode(newValue);
+            newCell.appendChild(newText);
+        });
+    };
+
+</script>
+<button type="button" id ="button1" name="button1" onclick = "addRow()">Přidej kontakt do tabulky</button>
+
+</body>
+</html>
