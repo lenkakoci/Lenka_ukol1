@@ -23,7 +23,7 @@ caption {
 }
 tfoot {
     background-color: #f9f9f9;
-    font-style: italic;
+    font-weight: bold;
 }
 form {
     margin-top: 20px;
