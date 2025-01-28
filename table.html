@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<table id="data" >
+<table>
     <caption>Tabulka kontaktů</caption>
     <thead>
     <tr>
@@ -22,7 +22,7 @@
         <td colspan="4">Toto je patička a má být vždy úplně dole, i když přidám nový řádek 😉.</td>
     </tr>
     </tfoot>
-    <tbody>
+    <tbody id="data">
     <tr>
         <td>Magdalena</td>
         <td>Dobromila</td>
@@ -60,7 +60,7 @@
 <script>
     var addRow = () => {
         const table = document.getElementById("data");
-        const newRow = table.insertRow(table.rows.length-1);
+        const newRow = table.insertRow(-1);
         ["phone", "email", "last_name", "first_name"].forEach((fieldName) => {
             const newValue = document.getElementById(fieldName).value;
             const newCell = newRow.insertCell(0);

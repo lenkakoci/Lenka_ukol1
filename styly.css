@@ -23,13 +23,12 @@ caption {
 }
 tfoot {
     background-color: #f9f9f9;
-    font-weight: bold;
+    font-style: italic;
 }
 form {
     margin-top: 20px;
 }
 label {
-    display: block;
     margin: 10px 0 5px;
 }
 input {
