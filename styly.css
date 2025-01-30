@@ -1,3 +1,10 @@
+
+:root {
+    --vychozi-barva: rgba(0, 0, 0, 0.75);
+}
+[vlastniAtribut="pozadi"]{
+    background-color: rgba(184, 152, 152, 0.5);
+}
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -8,25 +15,50 @@ table {
     margin-top: 20px;
 }
 th, td {
-    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 th {
+    color:var(--vychozi-barva);
     background-color: #f4f4f4;
     font-weight: bold;
+    border: 2px solid #dfdfdf;
+}
+
+tfoot {
+    font-size: 0.8em;
+    background-color: #f4f4f4;
+    font-style: italic;
+    font-weight: bold;
+}
+tfoot td {
+    border: 2px solid #dfdfdf;
+    color: var(--vychozi-barva);
+}
+table tr:nth-child(even) {
+    background-color: #faeee4;
+
+}
+tbody tr:nth-child(odd) {
+    color: #535353;
+
+}
+tbody tr:hover{
+    background-color: #b6bae6;
+
 }
 caption {
     font-size: 1.2em;
     margin-bottom: 10px;
     font-weight: bold;
 }
-tfoot {
-    background-color: #f9f9f9;
-    font-style: italic;
-}
+
+
 form {
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 label {
     margin: 10px 0 5px;
@@ -45,4 +77,20 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 480px) {
+    form{
+        flex-direction:column;
+    }
+}
+@media screen and (min-width: 480px) and (max-width:680px) {
+    form{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:auto;
+
+    }
+
 }
