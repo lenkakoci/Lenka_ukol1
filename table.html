@@ -8,7 +8,7 @@
 <body>
 
 <table>
-    <caption>Tabulka kontaktů</caption>
+    <caption data-vlastni-atribut="pozadi">Tabulka kontaktů</caption>
     <thead>
     <tr>
         <th>Jméno</th>
@@ -17,11 +17,7 @@
         <th>Telefon</th>
     </tr>
     </thead>
-    <tfoot>
-    <tr>
-        <td colspan="4">Toto je patička a má být vždy úplně dole, i když přidám nový řádek 😉.</td>
-    </tr>
-    </tfoot>
+
     <tbody id="data">
     <tr>
         <td>Magdalena</td>
@@ -36,27 +32,36 @@
         <td>+420 999 999 999</td>
     </tr>
     </tbody>
-
+    <tfoot>
+    <tr>
+        <td class="tf" colspan="4">Toto je patička. Měla by mít rámeček narozdíl od buňek těla tabulky 😉.</td>
+    </tr>
+    </tfoot>
 </table>
-<div>
+
+    <h2>Přidat nový kontakt</h2>
     <form id="form">
-        <h2>Přidat nový kontakt</h2>
-        <label for="first_name">Jméno:</label>
-        <input type="text" id="first_name" name="first_name" required>
-
-        <label for="last_name">Příjmení:</label>
-        <input type="text" id="last_name" name="last_name" required>
-
-        <label for = "email">Email:</label>
-        <input type ="email" name="email" id="email" required>
-
-        <label for="phone">Telefon:</label>
-        <input type="text" name="telefon" id="phone" required>
+        <div class = "box1">
+            <label for="first_name">Jméno:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class = "box1">
+            <label for="last_name">Příjmení:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class = "box2">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </div >
+        <div class="box2">
+            <label for="phone">Telefon:</label>
+            <input type="text" name="telefon" id="phone" required>
+        </div>
 
 
 
     </form>
-</div>
+
 <script>
     var addRow = () => {
         const table = document.getElementById("data");
